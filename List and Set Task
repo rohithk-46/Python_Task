@@ -1,0 +1,32 @@
+
+Names = ["Iswarya", "Priya", "Ram", "Raja", "Abi", "Anu", "Riya"]
+
+# Check data type
+print(type(Names))
+
+# Access first element
+print(Names[0])
+
+# Count total elements
+print(len(Names))
+
+# Modify the first element
+Names[0] = "Test"
+print(Names)
+
+# List of numbers
+Numbers = [1, 2, 3, 4, 5]
+print(Numbers)
+
+# Mixed data types
+Emp = ["Name", 28, 353443.23, True]
+print(Emp)
+
+# Nested list
+Emps = [
+    ["Iswarya", 28, 353443.23, True],
+    ["Ram", 31, 34353.45, False]
+]
+
+# Access nested list element
+print(Emps[0][3])
