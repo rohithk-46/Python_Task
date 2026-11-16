@@ -1,0 +1,53 @@
+# 1. Print Even Numbers: Write a Python program to print all even numbers from 1 to 50 using a loop and a conditional statement.
+# Print Even Numbers
+
+for i in range(1, 51):
+    if i % 2 == 0:
+        print(i)
+
+#Output: 2,4,6,8......50. (Even numbers)
+------------------------------------------------------
+# 2. Skip Multiples of 3: Print numbers from 1 to 30, but skip numbers that are divisible by 3 using continue.
+# Skip Multiples of 3
+
+for i in range(1, 31):
+    if i % 3 == 0:
+        continue
+    print(i)
+
+# Output: 1,2,4,5,7,8,10......28,29. (Skip Multiples of 3)
+------------------------------------------------------
+# 3. Stop at a Specific Number: Get a number from the user and print numbers from 1 up to that number. Stop the loop when the number reaches 15 using break.
+# Stop at a Specific Number
+
+n = int(input("Enter a number: "))
+
+for i in range(1, n + 1):
+    if i == 15:
+        break
+    print(i)
+
+#Output: Enter a number: 20 - 1,2,3,4,5,6,7,8,9,10,11,12,13,14.
+-------------------------------------------------------
+# 4. Positive and Negative Numbers: Get 10 numbers from the user. Check whether each number is positive, negative, or zero. Stop the loop if the user enters 0.
+# Positive and Negative Numbers
+
+for i in range(10):
+    n = int(input("Enter a number: "))
+
+    if n == 0:
+        print("Zero entered. Loop stopped.")
+        break
+    elif n > 0:
+        print("Positive number")
+    else:
+        print("Negative number")
+
+# Output: Enter a number: 10
+# Positive number
+# Enter a number: -5
+# Negative number
+# Enter a number: 8
+# Positive number
+# Enter a number: 0
+# Zero entered. Loop stopped.
