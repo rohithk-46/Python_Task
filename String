@@ -1,0 +1,59 @@
+#Student Full Name Analysis
+first_name = input("Enter first name: ")
+last_name = input("Enter last name: ")
+
+# Combine names
+full_name = first_name + " " + last_name
+
+# Display full name
+print("Full Name: {}".format(full_name))
+
+# Uppercase and lowercase
+print("Uppercase:", full_name.upper())
+print("Lowercase:", full_name.lower())
+
+# Count characters
+print("Total characters:", len(full_name))
+
+# Print each character
+print("Each character:")
+for ch in full_name:
+    if ch == " ":
+        continue
+    print(ch)
+
+# Check starting letter
+if full_name.startswith("A"):
+    print("Name starts with A")
+else:
+    print("Name does not start with A")
+
+# String slicing
+print("First 3 characters:", full_name[:3])
+print("Last 3 characters:", full_name[-3:])
+
+---------------------------------------------------
+
+# OUTPUT: 
+Enter first name: Arun
+Enter last name: Kumar
+
+Full Name: Arun Kumar
+Uppercase: ARUN KUMAR
+Lowercase: arun kumar
+Total characters: 10
+
+Each character:
+A
+r
+u
+n
+K
+u
+m
+a
+r
+
+Name starts with A
+First 3 characters: Aru
+Last 3 characters: mar
