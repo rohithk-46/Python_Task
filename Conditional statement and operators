@@ -1,0 +1,28 @@
+#1. Shopping Discount Eligibility
+
+amount = int(input("Enter shopping amount: "))
+member = input("Are you a member? (yes/no): ")
+
+if amount >= 2000 and member == "yes":
+    print("Eligible for 20% discount")
+else:
+    print("Not eligible for discount")
+
+#Enter shopping amount: 2500
+#Are you a member? (yes/no): yes
+#Eligible for 20% discount
+--------------------------------------------------------
+#2. Student Exam Eligibility
+
+attendance = int(input("Enter attendance percentage: "))
+marks = int(input("Enter internal marks: "))
+
+if attendance >= 75 and marks >= 40:
+    print("Eligible for examination")
+else:
+    print("Not eligible for examination")
+
+#output:
+#Enter attendance percentage: 85
+#Enter internal marks: 45
+#Eligible for examination
