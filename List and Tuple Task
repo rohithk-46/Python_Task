@@ -1,0 +1,131 @@
+# Task 1: Student Marks Management (List)
+
+marks = []
+
+# Get marks of 5 students
+for i in range(5):
+    m = int(input("Enter student mark: "))
+    marks.append(m)
+
+print("All Marks:", marks)
+
+# Add a new mark
+marks.append(85)
+print("After append:", marks)
+
+# Insert at second position
+marks.insert(1, 90)
+print("After insert:", marks)
+
+# Remove a particular mark
+marks.remove(60)
+print("After remove:", marks)
+
+# Highest and lowest marks
+print("Highest mark:", max(marks))
+print("Lowest mark:", min(marks))
+
+# Total and average
+print("Total:", sum(marks))
+print("Average:", sum(marks) / len(marks))
+
+# Sort marks
+marks.sort()
+print("Ascending order:", marks)
+
+# Count marks above 75
+count = 0
+for m in marks:
+    if m > 75:
+        count += 1
+
+print("Students scored above 75:", count)
+
+# Display marks greater than or equal to 50
+print("Marks >= 50:")
+for m in marks:
+    if m >= 50:
+        print(m)
+
+# OUTPUT: 
+Enter student mark: 60
+Enter student mark: 70
+Enter student mark: 80
+Enter student mark: 90
+Enter student mark: 50
+
+All Marks: [60, 70, 80, 90, 50]
+After append: [60, 70, 80, 90, 50, 85]
+After insert: [60, 90, 70, 80, 90, 50, 85]
+After remove: [90, 70, 80, 90, 50, 85]
+Highest mark: 90
+Lowest mark: 50
+Total: 465
+Average: 77.5
+Ascending order: [50, 70, 80, 85, 90, 90]
+Students scored above 75: 4
+
+Marks >= 50:
+50
+70
+80
+85
+90
+90
+--------------------------------------------------------------------------
+
+# Task 2: Shopping Cart Management (Tuple)
+products = ("Apple", "Milk", "Bread", "Rice", "Apple")
+
+# Display all products
+print("All Products:", products)
+
+# First and last products
+print("First Product:", products[0])
+print("Last Product:", products[-1])
+
+# First 3 products
+print("First 3 Products:", products[:3])
+
+# Check product availability
+print("Milk Available:", "Milk" in products)
+
+# Count product
+print("Apple Count:", products.count("Apple"))
+
+# Find product position
+print("Rice Position:", products.index("Rice"))
+
+# Concatenate another tuple
+new_products = ("Juice", "Eggs")
+products = products + new_products
+print("After Concatenation:", products)
+
+# Repeat tuple twice
+print("Repeated Tuple:", products * 2)
+
+# Display each product
+print("Each Product:")
+for p in products:
+    print(p)
+
+#OUTPUT:
+All Products: ('Apple', 'Milk', 'Bread', 'Rice', 'Apple')
+First Product: Apple
+Last Product: Apple
+First 3 Products: ('Apple', 'Milk', 'Bread')
+Milk Available: True
+Apple Count: 2
+Rice Position: 3
+After Concatenation: ('Apple', 'Milk', 'Bread', 'Rice', 'Apple', 'Juice', 'Eggs')
+
+Repeated Tuple: ('Apple', 'Milk', 'Bread', 'Rice', 'Apple', 'Juice', 'Eggs', 'Apple', 'Milk', 'Bread', 'Rice', 'Apple', 'Juice', 'Eggs')
+
+Each Product:
+Apple
+Milk
+Bread
+Rice
+Apple
+Juice
+Eggs
