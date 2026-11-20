@@ -1,0 +1,44 @@
+#Student mark
+
+class Student:
+    def __init__(self, name, marks):
+        self.__name = name
+        self.__marks = marks
+
+    def update_marks(self, marks):
+        self.__marks = marks
+
+    def display_details(self):
+        print("Student Name:", self.__name)
+        print("Student Marks:", self.__marks)
+
+
+# Object creation
+obj = Student("Rohith", 85)
+
+# Display original details
+obj.display_details()
+
+# Update marks
+obj.update_marks(95)
+
+print("\nAfter Updating Marks:")
+obj.display_details()
+
+# Try modifying private variable directly
+obj.__marks = 100
+
+print("\nAfter Direct Modification:")
+obj.display_details()
+
+#OUTPUT:
+Student Name: Rohith
+Student Marks: 85
+
+After Updating Marks:
+Student Name: Rohith
+Student Marks: 95
+
+After Direct Modification:
+Student Name: Rohith
+Student Marks: 95
