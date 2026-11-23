@@ -1,0 +1,176 @@
+#1. List – Shopping Cart
+
+items = ["Laptop", "Mobile", "Mouse", "Keyboard", "Headphones"]
+
+print("Original Items:", items)
+
+items.append("Charger")
+items.append("Monitor")
+print("After Adding:", items)
+
+remove_item = input("Enter item to remove: ")
+
+if remove_item in items:
+    items.remove(remove_item)
+    print("Item Removed Successfully")
+else:
+    print("Item not found")
+
+check_item = input("Enter item to check: ")
+
+if check_item in items:
+    print(check_item, "is available")
+else:
+    print(check_item, "is not available")
+
+print("Total Items:", len(items))
+print("Final Shopping Cart:", items)
+
+#OUTPUT:
+Original Items: ['Laptop', 'Mobile', 'Mouse', 'Keyboard', 'Headphones']
+After Adding: ['Laptop', 'Mobile', 'Mouse', 'Keyboard', 'Headphones', 'Charger', 'Monitor']
+Enter item to remove: Mouse
+Item Removed Successfully
+Enter item to check: Mobile
+Mobile is available
+Total Items: 6
+Final Shopping Cart: ['Laptop', 'Mobile', 'Keyboard', 'Headphones', 'Charger', 'Monitor']
+----------------------------------------------------------------------------------------------------------
+
+#2. Set – Unique Numbers
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+print("Union:", set1 | set2)
+
+print("Intersection:", set1 & set2)
+
+print("Difference:", set1 - set2)
+
+set1.add(80)
+print("After Adding:", set1)
+
+set1.remove(10)
+print("After Removing:", set1)
+
+#OUTPUT:
+Union: {70, 40, 10, 50, 20, 60, 30}
+Intersection: {40, 50, 30}
+Difference: {10, 20}
+After Adding: {80, 50, 20, 40, 10, 30}
+After Removing: {80, 50, 20, 40, 30}
+----------------------------------------------------------------------------------------------------------
+
+#3. Tuple – Employee Salaries
+
+salaries = (25000, 30000, 35000, 30000, 40000)
+
+print("Employee Salaries:", salaries)
+
+print("First Salary:", salaries[0])
+print("Last Salary:", salaries[-1])
+
+print("Maximum Salary:", max(salaries))
+print("Minimum Salary:", min(salaries))
+
+print("Salary Count:", salaries.count(30000))
+
+salary_list = list(salaries)
+
+salary_list.append(45000)
+
+print("Updated Salary List:", salary_list)
+
+#OUTPUT:
+First Salary: 25000
+Last Salary: 40000
+Maximum Salary: 40000
+Minimum Salary: 25000
+Salary Count: 2
+Updated Salary List: [25000, 30000, 35000, 30000, 40000, 45000]
+----------------------------------------------------------------------------------------------------------
+
+#4. Dictionary – Student Information
+
+student = {
+    "student_id": 101,
+    "name": "Rohith",
+    "age": 20,
+    "course": "AI&DS"
+}
+
+print("Student Information:", student)
+
+print("Keys:", student.keys())
+print("Values:", student.values())
+
+student["email"] = "rohith@gmail.com"
+print("After Adding Email:", student)
+
+student["age"] = 21
+print("After Updating Age:", student)
+
+student.pop("course")
+print("After Removing Course:", student)
+
+if "name" in student:
+    print("Name key exists")
+else:
+    print("Name key does not exist")
+
+print("Final Student Details:", student)
+
+#OUTPUT:
+Keys: dict_keys(['student_id', 'name', 'age', 'course'])
+Values: dict_values([101, 'Rohith', 20, 'AI&DS'])
+Name key exists
+Final Student Details: {'student_id': 101, 'name': 'Rohith', 'age': 21, 'email': 'rohith@gmail.com'}
+----------------------------------------------------------------------------------------------------------
+
+#5. Dictionary – Mobile Phone Inventory
+
+mobiles = {
+    "Redmi": 15000,
+    "Samsung": 20000,
+    "Vivo": 18000,
+    "Oppo": 17000,
+    "Realme": 16000
+}
+
+print("Mobile Inventory:")
+
+for name, price in mobiles.items():
+    print(name, ":", price)
+
+mobiles["iPhone"] = 60000
+
+print("After Adding New Mobile:", mobiles)
+
+mobiles["Redmi"] = 14000
+
+print("After Updating Price:", mobiles)
+
+print("Final Mobile Inventory:")
+
+for name, price in mobiles.items():
+    print(name, ":", price)
+
+#OUTPUT:
+Mobile Inventory:
+Redmi : 15000
+Samsung : 20000
+Vivo : 18000
+Oppo : 17000
+Realme : 16000
+
+Updated Mobile Inventory:
+Redmi : 14000
+Samsung : 20000
+Vivo : 18000
+Oppo : 17000
+Realme : 16000
+iPhone : 60000
